@@ -1,0 +1,173 @@
+/*GENERAL*/
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/*clearfix*/
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+/*BODY*/
+body {
+    background-color: rgb(207, 217,227);
+    background: url("../images/beton.jpg");
+    margin: 0;
+    font-family: "Open Sans";
+    align-content: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    /*display: block;*/
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+
+/*NAVIGATION*/
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+nav {
+    padding: 20px;
+    padding-right: 50px;
+
+
+}
+
+a:hover {background-color: #0b17be;
+}
+
+#header-nav .current {
+    border: #3D44AA solid 3px;
+}
+
+#footer-nav .current {
+    border: #1a5255 solid 3px;
+}
+
+
+/*LEFT MENU*/
+.list-group {
+    padding-top: 20px;
+    width: 15rem; 
+}
+
+.list-group-item{
+    font-weight: bold;
+    /*color: rgb(13, 110, 253);*/
+    color: white;
+    padding: .5rem;
+    border: solid 2px #07077A;
+    background-color: rgb(7 15 122 / 72%);
+    text-decoration: none;
+}
+
+
+/*HEAD*/
+
+head {
+    height: 600px;
+    background-color: rgba(13, 152, 193, 3);
+}
+
+#header-nav {
+    background-color: #070F7A;
+    height: auto;
+    text-align: right;
+    padding: 20px;
+    margin-top: 8px;
+}
+
+#header-nav h1{
+	margin-left: 50px;
+}
+
+.title {
+    color: #070F7A;
+    background-color: rgb(255 255 255 / 26%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 100%;
+}
+
+
+    
+
+
+nav a {
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+
+
+
+
+/*MAIN*/
+
+main {
+    height: 500px;
+}
+
+.clanek{
+    max-width: 50%;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #0B2122;
+    color: white;
+}
+
+.tel {
+
+    margin-left: 150px;
+}
+
+.tel a {
+    color: white;
+}
+
+
+.footer-menu {
+    margin-right: 0px;
+    margin-top: 6px;
+}
+
+/*CO DĚLÁM*/
+#galerie img {
+    max-width: 100%;
+    
+}
+
+@media screen and (min-width: 700px) {
+    #galerie img {
+        width: 50%;
+        float: left;
+    }
+}
+
+

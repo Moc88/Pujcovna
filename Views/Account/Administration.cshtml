@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Administrace účtu";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Vítejte v administraci, jste přihlášeni jako @User.Identity.Name</p>
+<div>
+    <a asp-action="Edit"
+       class="btn btn-info">Správa údajů</a>
+
+    <a asp-action="ChangePassword"
+       class="btn btn-info">Změna hesla</a>
+
+    <a asp-action="LogOut"
+       class="btn btn-info">Odhlásit se</a>
+</div>
+@if (this.Context.User.IsInRole("Admin"))
+{
+    <div style="margin-top:12px;">
+        <a class="btn btn-danger"
+           href="sprava-objednavek">Správa objednávek</a>
+
+        <a asp-action="ManageProduct"
+           asp-controller="Product"
+           class="btn btn-danger">Přidat produkt</a>
+
+        <a class="btn btn-danger"
+           href="sprava-kategorii">Správa kategorií</a>
+
+        <a asp-action="Index"
+           asp-controller="Article"
+           class="btn btn-danger">Seznam článků</a>
+
+        <a asp-action="Create"
+           asp-controller="Article"
+           class="btn btn-danger">Editor článků</a>
+
+        <a asp-action="Index"
+           asp-controller="AccountingSetting"
+           class="btn btn-danger">Nastavení</a>
+    </div>
+
+    <br />
+}

@@ -1,49 +1,69 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - pujcovna</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Půjčovna nářadí Proseč pod Ještědem</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">pujcovna</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <div class="header group row">
+            <div class="title col-12">
+                <h1>Půjčovna nářadí Proseč pod Ještědem</h1>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - pujcovna - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+            <nav id="header-nav" class="">
+                <a class="index current" href="index.html"> Půjčovna nářadí</a>
+                <a class="co-delam" href="co-delam.html"> Podmínky</a>
+                <a class="ukazky-prace" href="ukazky-prace.html"> Ukázky práce</a>
+                <a class="kontakt" href="kontakt.html"> Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <aside class="float-left">
+            <div class="list-group">
+                <a href="#" class="list-group-item">Vrtací a bourací kladiva</a>
+                <a href="#" class="list-group-item">Řezání a ohýbání</a>
+                <a href="#" class="list-group-item">Lešení a bednění</a>
+                <a href="#" class="list-group-item">Ostatní</a>
+            </div>
+
+        </aside>
+        <div class="float-right clanek">
+            <article>
+                @RenderBody()
+            </article>
+        </div>
+        <div class="group"></div>
+
+        
+
+    </main>
+    <footer>
+        <div class="footer group">
+            <div class="tel float-left">
+                <p>Telefon:   <a href="tel:000000000"> 000 000 000</a></p>
+                <p>E-mail:    <a href="mailto:lukas-moc@seznam.cz">lukas-moc@seznam.cz</a> </p>
+            </div>
+            <div class="footer-menu float-right">
+                <nav id="footer-nav" class="">
+                    <a class="index current" href="index.html"> Půjčovna nářadí</a>
+                    <a class="co-delam" href="co-delam.html"> Podmínky</a>
+                    <a class="ukazky-prace" href="ukazky-prace.html"> Ukázky práce</a>
+                    <a class="kontakt" href="kontakt.html"> Kontakt</a>
+                </nav>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
